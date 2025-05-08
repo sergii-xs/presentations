@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>NFC Tags</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/theme/league.min.css">
+  <style>
+    .reveal section img {
+      border: none;
+      box-shadow: none;
+      background: none;
+    }
+
+    .tech-specs {
+      font-size: 0.8em;
+    }
+
+    .reveal h1,
+    .reveal h2,
+    .reveal h3 {
+      text-transform: none;
+    }
+
+    .highlight {
+      color: #42affa;
+    }
+
+    .usage-table {
+      font-size: 0.8em;
+    }
+
+    .usage-table td,
+    .usage-table th {
+      border: 1px solid #555;
+      padding: 8px;
+      text-align: left;
+    }
+
+    .pros-cons {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .pros,
+    .cons {
+      text-align: left;
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    .pros {
+      background-color: rgba(0, 128, 0, 0.2);
+    }
+
+    .cons {
+      background-color: rgba(255, 0, 0, 0.2);
+    }
+
+    .reveal .slides {
+      text-align: left;
+    }
+
+    .reveal .slide-number {
+      font-size: 24px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <!-- TITLE SLIDE -->
+      <section>
+        <h1>NFC Tags</h1>
+        <p>Near Field Communication technology</p>
+        <p>Applications and possibilities</p>
+        <img src="./images/nfc-logo.jpg" alt="NFC Logo" style="width: 50%; margin: 0 auto;">
+      </section>
+
+      <!-- WHAT IS NFC? -->
+      <section>
+        <section>
+          <h2>What is NFC?</h2>
+          <p>Near Field Communication (NFC) is a short-range wireless technology that enables simple and secure
+            communication between electronic devices.</p>
+          <ul>
+            <li>Operates within a 4cm range (typically)</li>
+            <li>Based on RFID technology</li>
+            <li>Data transfer rates: 106-424 Kbit/s</li>
+            <li>Operates at 13.56 MHz frequency</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>How NFC Works</h2>
+          <p>NFC functions through electromagnetic induction between two loop antennas:</p>
+          <div style="display: flex; justify-content: space-between;">
+            <div style="width: 45%;">
+              <h3>Active Device</h3>
+              <ul>
+                <li>Generates RF field</li>
+                <li>Initiates communication</li>
+                <li>Powered (e.g., smartphones)</li>
+              </ul>
+            </div>
+            <div style="width: 45%;">
+              <h3>Passive Device</h3>
+              <ul>
+                <li>Powered by the RF field</li>
+                <li>No battery required</li>
+                <li>Responds to requests</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2>NFC Communication Modes</h2>
+          <ul>
+            <li><strong>Reader/Writer:</strong> Active device reads/writes to passive NFC tags</li>
+            <li><strong>Peer-to-Peer:</strong> Two active devices exchange data</li>
+            <li><strong>Card Emulation:</strong> Active device mimics a passive NFC card</li>
+          </ul>
+        </section>
+      </section>
+
+      <!-- POPULAR USES -->
+      <section>
+        <section>
+          <h2>Popular NFC Applications</h2>
+          <div class="usage-table">
+            <table>
+              <tr>
+                <th>Category</th>
+                <th>Examples</th>
+              </tr>
+              <tr>
+                <td>Payments</td>
+                <td>Apple Pay, Google Pay, Samsung Pay, Credit/Debit Cards</td>
+              </tr>
+              <tr>
+                <td>Access Control</td>
+                <td>Hotel key cards, Office badges, Transit cards</td>
+              </tr>
+              <tr>
+                <td>Gaming</td>
+                <td>Nintendo Amiibo, Skylanders, Disney Infinity</td>
+              </tr>
+              <tr>
+                <td>Smart Home</td>
+                <td>Device pairing, Automation triggers, Guest Wi-Fi access</td>
+              </tr>
+            </table>
+          </div>
+        </section>
+
+        <section>
+          <h2>NFC in Payments</h2>
+          <ul>
+            <li>Contactless payments via smartphone or cards</li>
+            <li>Tokenization for enhanced security</li>
+            <li>Growing adoption worldwide (especially post-COVID)</li>
+            <li>Examples: Apple Pay, Google Pay, Samsung Pay</li>
+          </ul>
+          <p>In 2023, over 60% of in-person transactions used contactless methods in developed markets.</p>
+        </section>
+
+        <section>
+          <h2>NFC in Gaming</h2>
+          <h3>Nintendo Amiibo</h3>
+          <ul>
+            <li>Collectible figures with embedded NFC tags</li>
+            <li>Store character data and game progress</li>
+            <li>Unlock special content in compatible games</li>
+            <li>Used across multiple Nintendo platforms</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>NFC in Marketing & Business</h2>
+          <ul>
+            <li>Smart posters and interactive displays</li>
+            <li>Digital business cards</li>
+            <li>Product authentication</li>
+            <li>Loyalty programs</li>
+            <li>Information sharing at events</li>
+          </ul>
+        </section>
+      </section>
+
+      <!-- ALL ABOUT NFC TAGS -->
+      <section>
+        <section>
+          <h2>NFC Tags Explained</h2>
+          <p>NFC tags are small, passive devices containing:</p>
+          <ul>
+            <li>An integrated circuit (chip)</li>
+            <li>An antenna</li>
+            <li>Optional memory (varies by type)</li>
+          </ul>
+          <p>They can be programmed to perform specific actions when scanned.</p>
+        </section>
+
+        <section>
+          <h2>Types of NFC Tags</h2>
+          <div class="tech-specs">
+            <table>
+              <tr>
+                <th>Type</th>
+                <th>Memory</th>
+                <th>Speed</th>
+                <th>Common Uses</th>
+              </tr>
+              <tr>
+                <td>Type 1</td>
+                <td>96 bytes - 2KB</td>
+                <td>106 Kbit/s</td>
+                <td>Simple tasks, URL sharing</td>
+              </tr>
+              <tr>
+                <td>Type 2</td>
+                <td>48 bytes - 2KB</td>
+                <td>106 Kbit/s</td>
+                <td>Business cards, simple links</td>
+              </tr>
+              <tr>
+                <td>Type 3 (FeliCa)</td>
+                <td>Up to 1MB</td>
+                <td>212 Kbit/s</td>
+                <td>Transit cards, payments</td>
+              </tr>
+              <tr>
+                <td>Type 4</td>
+                <td>Up to 32KB</td>
+                <td>424 Kbit/s</td>
+                <td>Access control, advanced applications</td>
+              </tr>
+              <tr>
+                <td>Type 5 (MIFARE)</td>
+                <td>Up to 8KB</td>
+                <td>Varies</td>
+                <td>Transit, access control</td>
+              </tr>
+            </table>
+          </div>
+        </section>
+
+        <section>
+          <h2>Form Factors</h2>
+          <ul>
+            <li><strong>Stickers:</strong> Thin, adhesive-backed tags for surfaces</li>
+            <li><strong>Cards:</strong> Credit card sized for wallets and holders</li>
+            <li><strong>Key fobs:</strong> Durable tags for keychains</li>
+            <li><strong>Wristbands:</strong> Wearable NFC for events and fitness</li>
+            <li><strong>Implantables:</strong> Biocompatible tags for under-skin use</li>
+            <li><strong>Custom shapes:</strong> Embedded in products or promotional items</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>What Can NFC Tags Do?</h2>
+          <ul>
+            <li>Open a website or app</li>
+            <li>Connect to Wi-Fi networks</li>
+            <li>Share contact information</li>
+            <li>Trigger phone settings (Airplane mode, Bluetooth, etc.)</li>
+            <li>Launch navigation to a location</li>
+            <li>Make a phone call or send a text</li>
+            <li>Trigger home automation</li>
+            <li>Check-in on social media</li>
+          </ul>
+        </section>
+      </section>
+
+      <!-- WHERE TO BUY NFC TAGS -->
+      <section>
+        <section>
+          <h2>Where to Buy NFC Tags</h2>
+          <div class="pros-cons">
+            <div class="pros">
+              <h3>Online</h3>
+              <ul>
+                <li>Amazon</li>
+                <li>eBay</li>
+                <li>AliExpress</li>
+              </ul>
+            </div>
+            <div class="cons">
+              <h3>Stores</h3>
+              <ul>
+                <li>Best Buy</li>
+                <li>Some office supply stores</li>
+              </ul>
+            </div>
+          </div>
+          <img src="./images/nfc-buy-online.png" alt="">
+        </section>
+
+        <section>
+          <h2>What to Look For When Buying</h2>
+          <ul>
+            <li><strong>Memory size:</strong> Based on your use case needs</li>
+            <li><strong>Form factor:</strong> Stickers, cards, wristbands, etc.</li>
+            <li><strong>NFC Type:</strong> Type 1-5 (NTAG213/215/216 are common)</li>
+            <li><strong>Durability:</strong> Weather-resistant for outdoor use</li>
+            <li><strong>Price:</strong> Typically $0.30-$2 per tag (bulk discounts available)</li>
+            <li><strong>Compatibility:</strong> Ensure they work with your devices</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Recommended NFC Tag Types</h2>
+          <ul>
+            <li><strong>General use:</strong> NTAG213 (144 bytes)</li>
+            <li><strong>More data:</strong> NTAG215 (504 bytes)</li>
+            <li><strong>Advanced projects:</strong> NTAG216 (888 bytes)</li>
+            <li><strong>Amiibo cloning:</strong> NTAG215 specifically</li>
+            <li><strong>Outdoor/durable:</strong> Look for IP-rated tags</li>
+          </ul>
+        </section>
+      </section>
+
+      <!-- NFC TOOLS APP DEMO -->
+      <section>
+        <section>
+          <h2>NFC Tools App</h2>
+          <div style="display: flex; justify-content: space-between;">
+            <div style="width: 65%;">
+              <ul>
+                <li>Read tag information</li>
+                <li>Write data to compatible tags</li>
+                <li>Program complex actions</li>
+                <li>Lock tags to prevent overwriting</li>
+              </ul>
+            </div>
+            <div style="width: 25%;">
+              <img src="./images/nfc-tools-app.jpg" alt="NFC Tools App">
+            </div>
+          </div>
+        </section>
+        <section>
+          <h1>DEMO TIME</h1>
+        </section>
+      </section>
+
+      <!-- CONCLUSION -->
+      <section>
+        <section>
+          <h2>Key Takeaways</h2>
+          <ul>
+            <li>NFC is a versatile short-range wireless technology</li>
+            <li>Applications span payments, access control, gaming, and automation</li>
+            <li>Different tag types serve different purposes</li>
+            <li>NFC tags are affordable and widely available</li>
+            <li>Simple tools like NFC Tools app make programming easy</li>
+          </ul>
+        </section>
+        <section>
+          <img src="./images/nfc-usage.jpg" alt="">
+        </section>
+      </section>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.min.js"></script>
+  <script>
+    Reveal.initialize({
+      controls: true,
+      progress: true,
+      center: false,
+      hash: true,
+      transition: 'slide',
+      slideNumber: true
+    });
+  </script>
+</body>
+
+</html>
