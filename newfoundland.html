@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newfoundland & Labrador</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/theme/moon.min.css">
+
+    <style>
+        .reveal {
+            font-family: "Source Sans Pro", Helvetica, sans-serif;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .reveal .slides {
+            width: 100%;
+            height: 100%;
+            max-width: none;
+            max-height: none;
+        }
+
+        .reveal .slides>section {
+            min-height: 100vh;
+            padding: 20px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .reveal h1,
+        .reveal h2,
+        .reveal h3 {
+            text-transform: none;
+            line-height: 1.2;
+        }
+
+        .reveal h1 {
+            font-size: 2.5em;
+            color: #42affa;
+        }
+
+        .reveal h2 {
+            color: #42affa;
+            font-size: 1.8em;
+        }
+
+        .reveal h3 {
+            color: #8dcffc;
+            font-size: 1.3em;
+        }
+
+        .reveal .slides section {
+            text-align: left;
+        }
+
+        .reveal h1,
+        .reveal h2,
+        .reveal h3,
+        .reveal h4 {
+            text-align: center;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .stat-box {
+            background: linear-gradient(135deg, rgba(66, 175, 250, 0.1), rgba(141, 207, 252, 0.1));
+            border-left: 4px solid #42affa;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .stat-number {
+            font-size: 2em;
+            color: #42affa;
+            font-weight: bold;
+        }
+
+        .highlight {
+            color: #42affa;
+            font-weight: bold;
+        }
+
+        .timeline {
+            position: relative;
+            padding: 20px 0;
+        }
+
+        .timeline-item {
+            margin: 20px 0;
+            padding-left: 40px;
+            position: relative;
+        }
+
+        .timeline-item:before {
+            content: '';
+            position: absolute;
+            left: 10px;
+            top: 5px;
+            width: 10px;
+            height: 10px;
+            background: #42affa;
+            border-radius: 50%;
+        }
+
+        .timeline-item:after {
+            content: '';
+            position: absolute;
+            left: 14px;
+            top: 15px;
+            width: 2px;
+            height: calc(100% + 10px);
+            background: rgba(66, 175, 250, 0.3);
+        }
+
+        .timeline-item:last-child:after {
+            display: none;
+        }
+
+        .iceberg-fact {
+            background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+            color: #0d47a1;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 20px 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .puffin-fact {
+            background: linear-gradient(135deg, #fff3e0, #ffe0b2);
+            color: #e65100;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 20px 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .culture-box {
+            background: linear-gradient(135deg, #f3e5f5, #e1bee7);
+            color: #4a148c;
+            padding: 25px;
+            border-radius: 10px;
+            margin: 15px 0;
+        }
+
+        .food-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border-left: 3px solid #ffa726;
+        }
+
+        .reveal .progress {
+            color: #42affa;
+        }
+
+        blockquote {
+            background: rgba(66, 175, 250, 0.1);
+            border-left: 4px solid #42affa;
+            padding: 20px;
+            font-style: italic;
+            margin: 30px 0;
+        }
+
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        .icon {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        .reveal ul {
+            display: block;
+            margin-left: 1em;
+        }
+
+        .reveal ol {
+            display: block;
+            margin-left: 1em;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        .floating {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        /* Responsive adjustments to prevent content cutoff */
+        @media screen and (max-height: 700px) {
+            .reveal .slides>section {
+                min-height: auto;
+                padding: 10px;
+            }
+
+            .stats-grid {
+                gap: 15px;
+                margin: 20px 0;
+            }
+
+            .reveal h1 {
+                font-size: 2em;
+            }
+
+            .reveal h2 {
+                font-size: 1.5em;
+            }
+
+            .timeline-item,
+            .stat-box,
+            .culture-box,
+            .food-item {
+                margin: 8px 0;
+                padding: 15px;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .two-column {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+
+            <!-- Title Slide -->
+            <section data-background-gradient="linear-gradient(135deg, #667eea 0%, #764ba2 100%)">
+                <h1 style="color: white; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">Newfoundland & Labrador</h1>
+                <h3 style="color: #ffd700;">The Rock & The Big Land</h3>
+                <p style="text-align: center; color: #ffd700; margin-top: 40px;">
+                    <em>North America's Most Remarkable Maritime Province</em>
+                </p>
+                <div style="text-align: center;">
+                    <img class="floating" width="400px"
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Flag_of_Newfoundland_and_Labrador.svg/1600px-Flag_of_Newfoundland_and_Labrador.svg.png"
+                        alt="">
+                </div>
+
+            </section>
+
+            <section>
+                <section>
+                    <h1>Noo-fn-land</h1>
+                    <div class="map-container" style="text-align: center; margin-top: 20px;">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9828805.96519505!2d-70.75661764761306!3d53.027358532467645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4b0ca3c27d2ff00f%3A0x64ec9db3d57639a8!2sNewfoundland%20and%20Labrador!5e0!3m2!1sen!2sca!4v1757092394405!5m2!1sen!2sca"
+                            width="700" height="500" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                    </div>
+                </section>
+                <section>
+                    <h2>Geography Trivia</h2>
+                    <h1 class="floating" style="color: #ffd700;">Which Country is Closest to Newfoundland?</h1>
+                </section>
+                <section>
+                    <h1>FRANCE 🇫🇷</h1>
+                    <h2>St Pierre and Miquelon</h2>
+                    <div class="map-container" style="text-align: center; margin-top: 20px;">
+                        <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1388911.2470274935!2d-57.466937926922476!3d47.1633913306569!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4b6c4b4bfb0e57d1%3A0x9c716737ea6c5c11!2sSt%20Pierre%20and%20Miquelon!5e0!3m2!1sen!2sca!4v1757094837392!5m2!1sen!2sca"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </section>
+
+            </section>
+
+            <!-- Overview -->
+            <section data-background-gradient="linear-gradient(135deg, #1e3c72 0%, #2a5298 100%)">
+                <h2>A Land of Extraordinary Contrasts</h2>
+                <div class="stats-grid">
+                    <div class="stat-box">
+                        <div class="stat-number">405,212 km²</div>
+                        <div>Larger than Japan or Germany</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number">29,000 km</div>
+                        <div>Of dramatic coastline</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number">7,000+</div>
+                        <div>Islands scattered along the coast</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number">540,000</div>
+                        <div>Resilient residents</div>
+                    </div>
+                </div>
+                <blockquote style="text-align: center; margin-top: 10px;">
+                    "Canada's youngest province with North America's oldest history"
+                </blockquote>
+            </section>
+
+            <section>
+                <section>
+                    <h1>Capital: St. John's</h1>
+                    <div style="text-align: center;">
+                         <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d303256.9209796738!2d-52.967186588689074!3d47.57196137563626!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4b0ca38e6b0aa261%3A0x9e1fd4001f12261f!2sSt.%20John&#39;s%2C%20NL!5e0!3m2!1sen!2sca!4v1757092863532!5m2!1sen!2sca"
+                        width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </section>
+
+                <section>
+                    <div style="text-align: center;">
+                        <iframe width="800" height="600"
+                            src="https://www.youtube.com/embed/4cvmNLgvs8k?si=CreV8I47K1tAeogo"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </section>
+
+            </section>
+
+
+
+
+
+
+
+            <!-- Ancient History -->
+            <section>
+                <section data-background-gradient="linear-gradient(135deg, #f093fb 0%, #f5576c 100%)">
+                    <h2>9,000 Years of Human History</h2>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <strong>7,500 BCE:</strong> Maritime Archaic peoples create North America's oldest funeral
+                            mound
+                        </div>
+                        <div class="timeline-item">
+                            <strong>1021 CE:</strong> Vikings establish L'Anse aux Meadows - first Europeans in Americas
+                        </div>
+                        <div class="timeline-item">
+                            <strong>1497:</strong> John Cabot claims Newfoundland for England
+                        </div>
+                        <div class="timeline-item">
+                            <strong>1583:</strong> Sir Humphrey Gilbert establishes first English colony in North
+                            America
+                        </div>
+                    </div>
+                </section>
+
+                <section data-background-gradient="linear-gradient(135deg, #fa709a 0%, #fee140 100%)">
+                    <h2>L'Anse aux Meadows</h2>
+                    <h3>The Viking Discovery</h3>
+                    <div style="background: rgba(255,255,255,0.9); color: #333; padding: 30px; border-radius: 10px;">
+                        <ul style="font-size: 0.9em;">
+                            <li>🏛️ <strong>UNESCO World Heritage Site</strong> since 1978</li>
+                            <li>📅 Precisely dated to <span class="highlight">1021 CE</span> through tree-ring analysis
+                            </li>
+                            <li>🏘️ Eight timber-framed turf buildings housed 30-160 Norse settlers</li>
+                            <li>🔨 First iron production in North America</li>
+                            <li>🌰 Butternut artifacts prove exploration reached New Brunswick</li>
+                            <li>⏰ Predates Columbus by <span class="highlight">471 years</span></li>
+                        </ul>
+                    </div>
+                    <p style="text-align: center; margin-top: 30px; font-style: italic;">
+                        "Where North America's European story truly begins"
+                    </p>
+                </section>
+            </section>
+
+            <!-- Geological Wonders -->
+            <section>
+                <section data-background-gradient="linear-gradient(135deg, #ff6b6b 0%, #4ecdc4 100%)">
+                    <h2>Gros Morne National Park</h2>
+                    <h3>Earth's Geology Textbook</h3>
+                    <div class="two-column">
+                        <div>
+                            <h4 style="color: #ffd700;">The Tablelands</h4>
+                            <ul style="font-size: 0.85em;">
+                                <li>🪨 Walk on Earth's exposed mantle</li>
+                                <li>🌋 500 million-year-old peridotite rock</li>
+                                <li>🔴 Mars-like desert landscape</li>
+                                <li>☠️ Toxic to most plant life</li>
+                                <li>🌍 Demonstrates continental drift</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 style="color: #ffd700;">Western Brook Pond</h4>
+                            <ul style="font-size: 0.85em;">
+                                <li>🏔️ 600-meter towering cliffs</li>
+                                <li>💧 Ultra-pure freshwater fjord</li>
+                                <li>⏳ 1.2 billion-year-old rock</li>
+                                <li>🏔️ Pissing Mare Falls - 350m drop</li>
+                                <li>🦅 Landlocked after glacial retreat</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <p
+                        style="text-align: center; margin-top: 30px; background: rgba(255,255,255,0.1); padding: 15px; border-radius: 10px;">
+                        <strong>UNESCO:</strong> "The best example of plate tectonics and glaciation in eastern North
+                        America"
+                    </p>
+                </section>
+            </section>
+
+            <!-- St. John's -->
+            <section>
+                <section data-background-gradient="linear-gradient(135deg, #667eea 0%, #764ba2 100%)">
+                    <h2>St. John's</h2>
+                    <h3>North America's Most Colorful Capital</h3>
+                    <div class="stats-grid">
+                        <div class="stat-box">
+                            <div class="icon">🏘️</div>
+                            <strong>Jellybean Row Houses</strong><br>
+                            Victorian homes in rainbow colors with names like "Mussels in the Corner"
+                        </div>
+                        <div class="stat-box">
+                            <div class="icon">🛍️</div>
+                            <strong>Water Street</strong><br>
+                            North America's oldest commercial street (1600s)
+                        </div>
+                        <div class="stat-box">
+                            <div class="icon">📡</div>
+                            <strong>Signal Hill</strong><br>
+                            First transatlantic wireless signal received (1901)
+                        </div>
+                        <div class="stat-box">
+                            <div class="icon">🌅</div>
+                            <strong>Cape Spear</strong><br>
+                            Most easterly point in North America
+                        </div>
+                    </div>
+                </section>
+
+                <section data-background-gradient="linear-gradient(135deg, #f093fb 0%, #f5576c 100%)">
+                    <img src="https://i0.wp.com/handluggageonly.co.uk/wp-content/uploads/2019/02/6I9A5404.jpg?w=1600&ssl=1"
+                        alt="">
+                </section>
+                <section>
+                    <img src="https://smartcdn.gprod.postmedia.digital/ocanada/wp-content/uploads/2020/08/79057646-st.-johns-nl.jpg?quality=90&strip=all&w=1128&h=846&type=webp&sig=ZhaXaWfGiKPPkpf7SiUtAQ"
+                        alt="">
+                </section>
+                <section>
+                    <img src="https://stjohnswalkingtours.com/wp-content/uploads/2022/08/293110793_10161440321670701_7678094179904760038_n.jpg"
+                        alt="">
+                </section>
+                <section>
+                    <img src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqg9wyOodB0m1dVqYoT8IDKD2-ePt7lpnvqz6hk8BmnB8by9Wl08ncfH6QkhGmRD-g-Tmq0F7MWZlYBvXq1b4_5ND8N0Ugh5UxDqJckgtuG0QfD-pEpvICCvU9pQXof809NqDSRBg=s1360-w1360-h1020-rw"
+                        alt="">
+                </section>
+                <section>
+                    <img src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4nr7F0tBjxKEua1I6LZleyCrIG7fU_BhB2zJrfRl5dd17YOrr2fA0eSMXghQWmXYFroegiBPCeGnXJ1bh4g2xHOQQPx7ganzVN_fTOJazGkWc9FPFyDyC-lwrs1S-SU5z5GWcOef3w=s1360-w1360-h1020-rw"
+                        alt="">
+                </section>
+            </section>
+
+            <!-- Culture & Traditions -->
+            <section>
+                <section data-background-gradient="linear-gradient(135deg, #ee9ca7 0%, #ffdde1 100%)">
+                    <h2>A Culture Like No Other</h2>
+                    <div class="culture-box">
+                        <h3 style="color: #4a148c;">The Newfoundland English</h3>
+                        <p><strong>16 distinct dialects</strong> - the world's greatest concentration!</p>
+                        <ul style="font-size: 0.9em;">
+                            <li><strong>"Landwash"</strong> - the shoreline between high and low tide</li>
+                            <li><strong>"Mauzy"</strong> - damp, foggy, drizzly weather</li>
+                            <li><strong>"Stunned as me arse"</strong> - very foolish</li>
+                            <li><strong>"Long may your big jib draw"</strong> - may you have good fortune</li>
+                            <li><strong>"Stay where you're to 'til I comes where you're at"</strong> - wait there for me
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section data-background-gradient="linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%)">
+                    <h2>The Screech-In Ceremony</h2>
+                    <h3>Becoming an Honorary Newfoundlander</h3>
+                    <div style="background: rgba(255,255,255,0.9); color: #333; padding: 30px; border-radius: 15px;">
+                        <ol style="font-size: 0.9em;">
+                            <li>🥃 <strong>Down a shot of Screech</strong> (40% Jamaican rum)</li>
+                            <li>🐟 <strong>Kiss a cod fish</strong> (frozen is acceptable!)</li>
+                            <li>🥩 <strong>Eat "Newfoundland Steak"</strong> (a slice of bologna)</li>
+                            <li>🗣️ <strong>Recite the phrase:</strong><br>
+                                <em style="color: #e65100; font-size: 1.1em;">"Deed I is me old cock, and long may yer
+                                    big jib draw!"</em>
+                            </li>
+                            <li>📜 <strong>Receive your certificate</strong> as an honorary Newfoundlander</li>
+                        </ol>
+                        <p style="text-align: center; margin-top: 20px; font-style: italic;">
+                            Created in 1974, now performed over 1 million times!
+                        </p>
+                    </div>
+                </section>
+
+                <section data-background-gradient="linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)">
+                    <h2>Kitchen Parties & Music</h2>
+                    <div class="two-column">
+                        <div>
+                            <h4 style="color: #e91e63;">Kitchen Party Tradition</h4>
+                            <ul style="font-size: 0.85em;">
+                                <li>🏠 Gatherings in the warmest room</li>
+                                <li>🎵 Multi-generational music making</li>
+                                <li>🪕 Fiddles, accordions, bodhráns</li>
+                                <li>🥄 The "Ugly Stick" percussion</li>
+                                <li>🍺 Stories, songs, and spirits</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 style="color: #e91e63;">Musical Fame</h4>
+                            <ul style="font-size: 0.85em;">
+                                <li>🎸 Great Big Sea - 11 Gold albums</li>
+                                <li>🎼 Alan Doyle's solo success</li>
+                                <li>🎵 Sea shanties gone viral</li>
+                                <li>🏆 "Musical Mecca" alongside New Orleans</li>
+                                <li>🎭 Highest artists per capita in Canada</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </section>
+
+            <!-- Natural Wonders -->
+            <section>
+                <section data-background-gradient="linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%)">
+                    <h2>Iceberg Alley</h2>
+                    <div class="iceberg-fact">
+                        <h3 style="color: #0d47a1; text-align: center;">10,000-Year-Old Giants</h3>
+                        <div class="stats-grid">
+                            <div>
+                                <strong style="font-size: 1.3em;">400-800</strong><br>
+                                Icebergs pass annually
+                            </div>
+                            <div>
+                                <strong style="font-size: 1.3em;">200,000 tonnes</strong><br>
+                                Average weight
+                            </div>
+                            <div>
+                                <strong style="font-size: 1.3em;">90%</strong><br>
+                                Hidden underwater
+                            </div>
+                            <div>
+                                <strong style="font-size: 1.3em;">1-2 years</strong><br>
+                                Journey from Greenland
+                            </div>
+                        </div>
+                        <p style="text-align: center; margin-top: 20px;">
+                            🧊 Best viewing: April to early July<br>
+                            🍺 Iceberg beer made from harvested berg water!
+                        </p>
+                    </div>
+                </section>
+
+                <section data-background-gradient="linear-gradient(135deg, #ffeaa7 0%, #fdcb6e 100%)">
+                    <h2>Puffin Capital of North America</h2>
+                    <div class="puffin-fact">
+                        <h3 style="color: #e65100; text-align: center;">Witless Bay Ecological Reserve</h3>
+                        <ul style="font-size: 0.95em;">
+                            <li>🐧 <strong>260,000+ breeding pairs</strong> of Atlantic Puffins</li>
+                            <li>🐦 <strong>4 million seabirds</strong> total in summer</li>
+                            <li>🐟 Puffins can carry <strong>61 fish</strong> in their beaks</li>
+                            <li>🏊 Dive up to <strong>200 feet deep</strong> for food</li>
+                            <li>❤️ <strong>Mate for life</strong> and return to same burrow</li>
+                            <li>🏝️ North America's largest Atlantic Puffin colony</li>
+                        </ul>
+                        <p style="text-align: center; margin-top: 20px; font-weight: bold;">
+                            Peak viewing: mid-June to mid-July
+                        </p>
+                    </div>
+                </section>
+
+                <section data-background-gradient="linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)">
+                    <h2>Whale Watching Paradise</h2>
+                    <div style="background: rgba(255,255,255,0.95); color: #333; padding: 30px; border-radius: 15px;">
+                        <h3 style="color: #0277bd; text-align: center;">22 Species of Whales</h3>
+                        <div class="two-column">
+                            <div>
+                                <h4 style="color: #01579b;">Humpback Haven</h4>
+                                <ul style="font-size: 0.85em;">
+                                    <li>🐋 10,000 humpbacks annually</li>
+                                    <li>📏 40-50 feet long</li>
+                                    <li>⚖️ Up to 65 tons</li>
+                                    <li>🗺️ 5,000-mile migration</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 style="color: #01579b;">Also Spotted</h4>
+                                <ul style="font-size: 0.85em;">
+                                    <li>🐋 Minke whales</li>
+                                    <li>🐋 Orcas (occasionally)</li>
+                                    <li>🐋 Blue whales (rare)</li>
+                                    <li>🐋 Pilot whales</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <p
+                            style="text-align: center; margin-top: 20px; background: #e1f5fe; padding: 15px; border-radius: 8px;">
+                            <strong>Best viewing:</strong> mid-June through mid-August
+                        </p>
+                    </div>
+                </section>
+
+                <section data-background-gradient="linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)">
+                    <h2>The Moose Explosion</h2>
+                    <div style="background: rgba(66,175,250,0.1); padding: 30px; border-radius: 15px;">
+                        <h3 style="text-align: center;">From 4 to 150,000 in 120 Years!</h3>
+                        <div class="stats-grid">
+                            <div class="stat-box">
+                                <div class="icon">🦌</div>
+                                <strong>1904:</strong> 4 moose introduced from New Brunswick
+                            </div>
+                            <div class="stat-box">
+                                <div class="icon">📈</div>
+                                <strong>2024:</strong> 120,000-150,000 moose
+                            </div>
+                            <div class="stat-box">
+                                <div class="icon">🏆</div>
+                                <strong>Highest density</strong> in North America
+                            </div>
+                            <div class="stat-box">
+                                <div class="icon">⚠️</div>
+                                <strong>700+</strong> vehicle collisions annually
+                            </div>
+                        </div>
+                        <p style="text-align: center; margin-top: 20px;">
+                            One of wildlife management's most successful (and problematic) introductions!
+                        </p>
+                    </div>
+                </section>
+            </section>
+
+            <!-- Food & Cuisine -->
+            <section>
+                <section data-background-gradient="linear-gradient(135deg, #ff9a56 0%, #ff6a88 100%)">
+                    <h2>Traditional Newfoundland Cuisine</h2>
+                    <div class="food-item">
+                        <h3 style="color: #ffd700;">🍖 Jiggs Dinner</h3>
+                        <p>Sunday feast of salt beef, root vegetables, cabbage, and pease pudding. Followed by Figgy
+                            Duff dessert!</p>
+                    </div>
+                    <div class="food-item">
+                        <h3 style="color: #ffd700;">🍩 Toutons</h3>
+                        <p>Fried bread dough served with molasses - "a pancake crossed with a donut"</p>
+                    </div>
+                    <div class="food-item">
+                        <h3 style="color: #ffd700;">👅 Cod Tongues</h3>
+                        <p>Actually small neck muscles, pan-fried delicacy</p>
+                    </div>
+                    <div class="food-item">
+                        <h3 style="color: #ffd700;">🍓 Bakeapples</h3>
+                        <p>Tart orange cloudberries - worth their weight in gold!</p>
+                    </div>
+                </section>
+            </section>
+
+
+            <section>
+                <section>
+                    <h1>Screech-in Ceremony</h1>
+                    <p>Newfoundland Screech is a rum sold in Newfoundland with 40% alcohol by volume.</p>
+                    <img width="400px"
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/NewfoundlandScreech.JPG/960px-NewfoundlandScreech.JPG"
+                        alt="">
+                </section>
+                <section>
+                    <h1>Ceremony</h1>
+                    <p>Newfoundland Screech is used in a ceremony known as the "screech-in". The "screech-in" is a
+                        ceremony performed on non-Newfoundlanders (known to Newfoundlanders as a "come from away" or
+                        "mainlander") involving a shot of screech, a short recitation, and the kissing of a cod. </p>
+                </section>
+                <section>
+                    <img src="https://globalnews.ca/wp-content/uploads/2019/02/20610790.jpg?quality=65&strip=all"
+                        alt="">
+                </section>
+                <section>
+                    <img src="https://preview.redd.it/9fr9cqn0t4n31.jpg?width=640&crop=smart&auto=webp&s=dcd9fc701a1911578ce233f95e2362d81fdadce5"
+                        alt="">
+                </section>
+                <section>
+                    <img src="https://shopdownhome.com/assets/images/3530.jpg" alt="">
+                </section>
+            </section>
+
+            <!-- Economic Transformation -->
+            <section>
+                <section data-background-gradient="linear-gradient(135deg, #3f2b96 0%, #a8c0ff 100%)">
+                    <h2>From Cod to Oil</h2>
+                    <h3>Economic Revolution</h3>
+                    <div class="two-column">
+                        <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 10px;">
+                            <h4 style="color: #ffd700;">The Cod Collapse (1992)</h4>
+                            <ul style="font-size: 0.85em;">
+                                <li>📉 500-year-old fishery ends</li>
+                                <li>👥 37,000 jobs lost (12% of workforce)</li>
+                                <li>🏘️ Outport communities devastated</li>
+                                <li>🔄 2024: Limited reopening after 32 years</li>
+                            </ul>
+                        </div>
+                        <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 10px;">
+                            <h4 style="color: #ffd700;">The Oil Boom</h4>
+                            <ul style="font-size: 0.85em;">
+                                <li>⛽ $46 billion (1997-2007)</li>
+                                <li>🛢️ 35% of provincial GDP</li>
+                                <li>💰 Ended equalization payments</li>
+                                <li>🏗️ 4 major platforms operating</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <blockquote style="text-align: center; margin-top: 30px;">
+                        From "have-not" to "have" province in one generation
+                    </blockquote>
+                </section>
+            </section>
+
+            <!-- Maritime Heritage -->
+            <section>
+                <section data-background-gradient="linear-gradient(135deg, #2b5876 0%, #4e4376 100%)">
+                    <h2>Maritime Heritage</h2>
+                    <div style="background: rgba(255,255,255,0.9); color: #333; padding: 30px; border-radius: 15px;">
+                        <h3 style="color: #2b5876;">Titanic Connection</h3>
+                        <ul>
+                            <li>📡 Cape Race received first distress call - April 14, 1912, 11:40 PM</li>
+                            <li>🚢 Recovery operations from Halifax</li>
+                            <li>⚰️ 150 Titanic victims buried in Halifax</li>
+                        </ul>
+
+                        <h3 style="color: #2b5876; margin-top: 30px;">WWII Maritime Drama</h3>
+                        <ul>
+                            <li>🎖️ German U-boats sank ships at Bell Island (1942)</li>
+                            <li>⚓ USS Truxtun disaster - 203 American sailors lost</li>
+                            <li>🦸 Local heroes rescued survivors in terrible conditions</li>
+                            <li>🛡️ Battle of the North Atlantic convoy protection</li>
+                        </ul>
+                    </div>
+                </section>
+            </section>
+
+            <!-- Unique Facts -->
+            <section data-background-gradient="linear-gradient(135deg, #fc4a1a 0%, #f7b733 100%)">
+                <h2>Fascinating Newfoundland Facts</h2>
+                <div class="stats-grid">
+                    <div class="stat-box">
+                        <div class="icon">⏰</div>
+                        <strong>Own Time Zone</strong><br>
+                        30 minutes ahead of Atlantic Time
+                    </div>
+                    <div class="stat-box">
+                        <div class="icon">🌫️</div>
+                        <strong>Foggiest Place</strong><br>
+                        St. John's: 121 foggy days/year
+                    </div>
+                    <div class="stat-box">
+                        <div class="icon">💨</div>
+                        <strong>Windiest City</strong><br>
+                        St. John's: 47 days of gale winds
+                    </div>
+                    <div class="stat-box">
+                        <div class="icon">🗺️</div>
+                        <strong>Closer to Ireland</strong><br>
+                        Than to Winnipeg, Manitoba
+                    </div>
+                </div>
+                <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 10px; margin-top: 30px;">
+                    <p style="text-align: center;">
+                        <strong>Did you know?</strong><br>
+                        Newfoundland has its own dictionary with over 5,000 unique words!<br>
+                        The province has 4 UNESCO World Heritage Sites<br>
+                        "Newfoundland" has 4 pronunciations - locals say "New-fin-LAND"
+                    </p>
+                </div>
+            </section>
+
+            <!-- Demographics -->
+            <section data-background-gradient="linear-gradient(135deg, #eb3349 0%, #f45c43 100%)">
+                <h2>Population & Demographics</h2>
+                <div style="background: rgba(255,255,255,0.95); color: #333; padding: 30px; border-radius: 15px;">
+                    <div class="two-column">
+                        <div>
+                            <h4 style="color: #eb3349;">Population Distribution</h4>
+                            <ul style="font-size: 0.85em;">
+                                <li>👥 540,000 total residents</li>
+                                <li>🏙️ 40% live in St. John's area</li>
+                                <li>🏝️ 95% on Newfoundland island</li>
+                                <li>🗺️ Labrador 2x larger, 5% of population</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 style="color: #eb3349;">Recent Trends</h4>
+                            <ul style="font-size: 0.85em;">
+                                <li>📊 Oldest median age: 47.8 years</li>
+                                <li>🌍 6,500+ immigrants in 2024</li>
+                                <li>📈 Immigration reversing decline</li>
+                                <li>🎓 72% settle in St. John's</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <p
+                        style="text-align: center; margin-top: 20px; background: #ffebee; padding: 15px; border-radius: 8px;">
+                        Only province to lose population 2016-2021, but immigration boom changing the trend!
+                    </p>
+                </div>
+            </section>
+
+            <!-- The Journey to Canada -->
+            <section data-background-gradient="linear-gradient(135deg, #8e2de2 0%, #4a00e0 100%)">
+                <h2>The Reluctant Canadian</h2>
+                <h3>Path to Confederation</h3>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <strong>1907-1934:</strong> Independent Dominion equal to Canada
+                    </div>
+                    <div class="timeline-item">
+                        <strong>1934-1949:</strong> British-appointed commission government
+                    </div>
+                    <div class="timeline-item">
+                        <strong>1948:</strong> Two referendums on future
+                    </div>
+                    <div class="timeline-item">
+                        <strong>52.3% vs 47.7%:</strong> Narrowest margin for confederation
+                    </div>
+                    <div class="timeline-item">
+                        <strong>March 31, 1949:</strong> Becomes Canada's 10th province
+                    </div>
+                </div>
+                <blockquote style="text-align: center; margin-top: 30px;">
+                    "Many still refer to Canada as 'the mainland' - a distinct identity persists"
+                </blockquote>
+            </section>
+
+            <!-- Four UNESCO Sites -->
+            <section data-background-gradient="linear-gradient(135deg, #f2994a 0%, #f2c94c 100%)">
+                <h2>Four UNESCO World Heritage Sites</h2>
+                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;">
+                    <div style="background: rgba(255,255,255,0.9); color: #333; padding: 20px; border-radius: 10px;">
+                        <h4 style="color: #f2994a;">🏛️ L'Anse aux Meadows</h4>
+                        <p style="font-size: 0.85em;">Viking settlement (1021 CE) - First Europeans in Americas</p>
+                    </div>
+                    <div style="background: rgba(255,255,255,0.9); color: #333; padding: 20px; border-radius: 10px;">
+                        <h4 style="color: #f2994a;">⛰️ Gros Morne</h4>
+                        <p style="font-size: 0.85em;">Earth's mantle exposed - Geological wonderland</p>
+                    </div>
+                    <div style="background: rgba(255,255,255,0.9); color: #333; padding: 20px; border-radius: 10px;">
+                        <h4 style="color: #f2994a;">🐋 Red Bay</h4>
+                        <p style="font-size: 0.85em;">16th-century Basque whaling station</p>
+                    </div>
+                    <div style="background: rgba(255,255,255,0.9); color: #333; padding: 20px; border-radius: 10px;">
+                        <h4 style="color: #f2994a;">🦕 Mistaken Point</h4>
+                        <p style="font-size: 0.85em;">565-million-year-old fossils - Earth's oldest complex life</p>
+                    </div>
+                </div>
+                <p style="text-align: center; margin-top: 30px; font-style: italic;">
+                    More UNESCO sites than most countries!
+                </p>
+            </section>
+
+            <!-- Climate -->
+            <section data-background-gradient="linear-gradient(135deg, #536976 0%, #292e49 100%)">
+                <h2>Maritime Climate Extremes</h2>
+                <div style="background: rgba(255,255,255,0.95); color: #333; padding: 30px; border-radius: 15px;">
+                    <h3 style="color: #536976; text-align: center;">Where Weather Makes Headlines</h3>
+                    <div class="stats-grid">
+                        <div>
+                            <strong style="color: #292e49;">St. John's Records:</strong><br>
+                            • Windiest city in Canada<br>
+                            • Foggiest major city<br>
+                            • Most snow in one day: 76.2 cm
+                        </div>
+                        <div>
+                            <strong style="color: #292e49;">Argentina, NL:</strong><br>
+                            • 206 days of fog annually<br>
+                            • Foggiest place on Earth<br>
+                            • Visibility < 1 km half the year </div>
+                        </div>
+                        <p
+                            style="text-align: center; margin-top: 30px; background: #e8eaf6; padding: 15px; border-radius: 8px;">
+                            <strong>The Meeting Place:</strong> Where the warm Gulf Stream meets the cold Labrador
+                            Current,<br>
+                            creating the perfect conditions for fog, storms, and spectacular weather!
+                        </p>
+                    </div>
+            </section>
+
+            <!-- Thank You -->
+            <section data-background-gradient="linear-gradient(135deg, #f093fb 0%, #f5576c 100%)">
+                <h1 style="color: white;">Questions</h1>
+                <div style="text-align: center;">
+                    <img src="https://images.unsplash.com/photo-1571573399484-b354d2a9e3be?q=80&w=600&auto=format&fit=crop&ixlib=rb-"
+                        alt="">
+                </div>
+                <div style="text-align: center;">
+                    <p style="color: #ffd700; font-size: 0.9em;">
+                        Sources: Must Do Canada, UNESCO, Parks Canada,<br>
+                        Heritage Newfoundland & Labrador, Statistics Canada
+                    </p>
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/plugin/markdown/markdown.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/plugin/highlight/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/plugin/notes/notes.min.js"></script>
+
+    <script>
+        Reveal.initialize({
+            hash: true,
+            controls: true,
+            progress: true,
+            center: false,
+            transition: 'slide',
+            backgroundTransition: 'fade',
+            width: '100%',
+            height: '100%',
+            minScale: 0.2,
+            maxScale: 2.0,
+            margin: 0.04,
+
+            plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+        });
+    </script>
+</body>
+
+</html>
